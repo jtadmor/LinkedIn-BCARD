@@ -11,15 +11,13 @@ var AuthButton = React.createClass({
 	displayName: 'AuthButton',
 	// Event handler for clicking on the button
 	handleClick: function(e) {
-		console.log('Clicked auth button!');
 		return;
 	},
 	// Render the button
 	render: function() {
 		return (React.createElement('button', {className: 'auth-btn', id: 'auth-btn', onClick: this.handleClick}, 'Click!'));
 	}
-})
-
+});
 
 React.render(React.createElement(AuthButton, null), document.getElementById('auth-btn-container'));
 
