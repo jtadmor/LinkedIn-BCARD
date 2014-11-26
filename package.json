@@ -1,25 +1,24 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.2",
-  "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "name": "Card",
+  "version": "0.0.1",
+  "description": "Custom Business Card Generator",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "app.js"
   },
   "dependencies": {
-    "express": "~4.9.x"
+    "express": "^4.9.8",
+    "jade": "^1.7.0",
+    "jquery": "^2.1.1",
+    "mongoose": "^3.8.19",
+    "react": "^0.12.1"
   },
   "engines": {
     "node": "0.10.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/jtadmor"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
   "license": "MIT"
 }
