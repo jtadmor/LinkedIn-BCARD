@@ -1,4 +1,4 @@
-var apiController = function() {
+var apiController = {
 	
 };
 
