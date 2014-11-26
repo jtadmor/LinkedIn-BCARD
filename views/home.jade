@@ -3,10 +3,9 @@ extends layout
 block content
 	h1 Welcome to your custom business card generator!
 	br
-	h4 To get started, log in with your LinkedIn credentials. 
-	form(id="user-login")
-		input(placeholder="Username here")
-		input(type="submit")
+	h4 To get started, click here to connect to your LinkIn profile.
+	.container
+	//- button(id="li-auth") Connect! 
 
 block scripts
 	script(src="auth.js")

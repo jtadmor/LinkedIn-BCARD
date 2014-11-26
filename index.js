@@ -12,7 +12,7 @@ app.set('view engine','jade');
 app.use(express.static(__dirname + '/public'));
 
 // DB connection
-mongoose.connect('mongodb://localhost/bcards');
+// mongoose.connect('mongodb://localhost/bcards');
 
 // ROUTES
 
