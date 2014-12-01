@@ -22,6 +22,8 @@ var apiController = {
 		// No need to send anything back because it is already re-rendered on the client
 		console.log('data sent:', req.body)
 		Profile.findOneAndUpdate({_id: req.body._id}, {$set: req.body}, function(err, doc) {
+			if (err)
+				console.log(err)
 			console.log('saved doc:', doc);
 			res.send('Great success!');
 		});
