@@ -20,7 +20,9 @@ var apiController = {
 		// Grab the id, field that was edited, and the new value from req.body
 		// Find by id and update
 		// No need to send anything back because it is already re-rendered on the client
+		console.log('data sent:', req.body)
 		Profile.findOneAndUpdate({_id: req.body._id}, {$set: req.body}, function(err, doc) {
+			console.log('saved doc:', doc);
 			res.send('Great success!');
 		});
 	}
