@@ -103,6 +103,7 @@ var linkController = {
 		var scope = '&scope=r_fullprofile%20r_emailaddress';
 		var state = '&state=NinjasInPijamas';
 		var redirect = '&redirect_uri=https://fathomless-earth-5099.herokuapp.com/auth/';
+		// var redirect = '&redirect_uri=http://localhost:3000/auth/';
 		var url = base + api + scope + state + redirect;
 
 		// And redirect
@@ -124,6 +125,7 @@ var linkController = {
 			var path = '/uas/oauth2/accessToken?grant_type=authorization_code';		
 			var code = '&code='+ req.query.code;
 			var redirect = '&redirect_uri=https://fathomless-earth-5099.herokuapp.com/auth/';
+			// var redirect = '&redirect_uri=http://localhost:3000/auth/';
 			var api = '&client_id=78n4kzsmz4le0g';
 			var secret = '&client_secret=JtmXjnn66CoQ8n3U';
 			

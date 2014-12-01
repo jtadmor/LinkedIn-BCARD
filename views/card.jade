@@ -4,8 +4,10 @@ block content
 	//- Load all content via card.jsx
 
 block scripts
-	script(src="../build/card.js")
 	//- Script to have access to the user's id and a variable passwordEntered that determines whether fields can be edited or not
 	script
 		|var user_id = "#{id}";
 		|var passwordEntered = false;
+	script(src="/card.js" )
+	
+	
