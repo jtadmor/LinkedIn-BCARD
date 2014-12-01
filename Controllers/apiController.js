@@ -23,6 +23,7 @@ var apiController = {
 		console.log('data sent:', req.body)
 		var profile = req.body;
 		delete profile._id;
+		console.log('profile to save:', profile);
 		Profile.findOneAndUpdate({_id: req.body._id}, {$set: profile}, function(err, doc) {
 			if (err)
 				console.log(err)
