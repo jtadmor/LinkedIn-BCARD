@@ -1,33 +1,28 @@
-var apiController = {
-	// Authenticating with LinkedIn
-	requestAuthCode: function(req, res) {
-		
-		// Create the redirect string modularized for easy editing
-		var base = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code';
-		var api = '&client_id=78n4kzsmz4le0g';
-		var scope = '&scope=r_fullprofile%20r_emailaddress';
-		var state = '&state=NinjasInPijamas';
-		var redirect = '&redirect_uri=http://localhost:3000/auth';
-		var url = base + api + scope + state + redirect;
+// Requires
+var Profile = require('../Models/Profile');
 
-		// And redirect
-		res.redirect(url);
+// Define methods for retrieving and saving profile data
+var apiController = {
+	
+	// Find the user profile and send it back to the client
+	getProfile: function(req, res) {
+		Profile.findOne({id: req.params.id}).exec(function(err, profile) {
+			if (err)
+				console.log(err);
+			else {
+				res.send(profile);
+			}
+		});
 	},
-	getToken: function(req, res) {
-		// Check to make sure the state is correct
-		if (req.query.state !== 'NinjasInPijamas') {
-			res.send('State Denied: Top Secret Access Only');
-		}
-		// If an auth code was sent back, render the view
-		else if (req.query.code) {
-			// res.redirect('https://www.linkedin.com/uas/oauth2/accessToken?grant_type=authorization_code&code='+req.query.code+'&redirect_uri=http://localhost:3000/auth&client_id=78n4kzsmz4le0g&client_secret=JtmXjnn66CoQ8n3U');
-			res.render('view', {code: req.query.code});
-		}
-		// Error logging
-		else {
-			console.log(req.query.error_description || 'Bad State');
-			res.send({error: req.query.error_description || 'Bad State'});
-		}
+
+	// Save the user profile
+	saveProfileData: function(req, res) {
+		// Grab the id, field that was edited, and the new value from req.body
+		// Find by id and update
+		// No need to send anything back because it is already re-rendered on the client
+		Profile.findOneAndUpdate({_id: req.body._id}, {$set: req.body}, function(err, doc) {
+			res.send('Great success!');
+		});
 	}
 };
 

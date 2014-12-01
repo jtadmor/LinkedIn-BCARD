@@ -1,10 +1,7 @@
 extends layout
 
 block content
-	h1 Welcome to your custom business card generator!
-	br
-	h4 To get started, click here to connect to your LinkIn profile.
-	a.btn-container(id="auth-btn-container", href="/reqauth")
-
-block scripts
-	script(src="home.js")
+	h1.dancing Welcome to your custom business card generator!
+	h4 To get started, connect to your LinkedIn profile:
+	a(href="/reqauth")
+		button Click!

@@ -1,16 +1,15 @@
-var React = require('react')
-
+// Controll the rendering of views for the client
 var indexController = {
 
 	// Home / login page
 	home: function(req, res) {
 		res.render('home');
 	},
-	// Viewing and editing a card
+	// Viewing and editing a card for a given user
 	viewCard: function(req, res) {
-		// Render the page
-		res.send('Hello!');
-	}
+		res.render('card', {id: req.params.id});
+	},
+
 };
 
 module.exports = indexController;

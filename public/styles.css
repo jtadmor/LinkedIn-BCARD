@@ -4,7 +4,11 @@ GLOBAL STYLES
 
 */
 
-h1 {
+* {
+	box-sizing: border-box;
+}
+
+.dancing {
 
 	/* Center the welcome text */
 	text-align: center;
@@ -14,7 +18,122 @@ h1 {
 	font-weight: 700;
 }
 
-h4 {
+/*
 
+STYLE THE BUSINESS CARD
 
+*/
+
+/* CARD ITSELF */
+.business-card-container {
+	margin: 0 auto;
+	width: 500px;
+	padding: 10px;
+	position: relative;
+
+	border: 4px double black;
+	box-shadow: 0 0 4px 4px gray inset;
+}
+
+/* FIELDS */
+.business-card-container input {
+	border: none;
+}
+
+.business-card-container input:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+/* Picture */
+.img-container {
+	float: left;
+}
+
+.img-container img {
+	height: 120px;
+}
+
+.image-form {
+	display: none;
+}
+
+/* NAME */
+.name-container {
+	display: inline-block;
+}
+
+.name-container .card-field {
+	font-size: 3em;
+	font-family: 'Dancing Script', cursive;
+	text-align: center;
+
+	width: 300px;
+}
+
+/* HEADLINE */
+.headline-container {
+	display: inline-block;
+}
+
+.headline-container .card-field {
+	font-size: 1.5em;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* POSITION */
+.position-container {
+	clear: left;
+	margin: 10px 20px;
+	width: auto;
+}
+
+.position-container * {
+	display: inline;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+.position-container input:first-of-type {
+	font-size: 1.5em;
+	font-weight: bold;
+	width: 240px;
+}
+
+.position-container input:last-of-type {
+	font-size: 1.2em;
+	width: 140px;
+}
+
+/* SKILS */
+
+.skills-holder input {
+	font-family: 'Raleway', sans-serif;
+}
+
+.skills-holder p {
+	margin: 6px;
+}
+
+/* CONTACTS */
+
+.contact-container input {
+	font-family: 'Raleway', sans-serif;
+}
+
+.contact-container p {
+	margin: 6px;
+}
+
+/* 
+
+PASSWORD FORM AND SAVE BUTTON
+
+*/
+
+.password-form, .save-card-container {
+	margin: 30px auto;
+	width: 300px;
+	text-align: center;
 }
